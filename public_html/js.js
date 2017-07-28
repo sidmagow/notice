@@ -4,13 +4,28 @@
 
 var x;
 let loopId;
+
+function sendMessage() {
+    $.post('https://api.plivo.com/v1/Account/MAY2Y3MTM2OTJJNTI0NJ/Message/',
+        {
+          src:'9868854918',
+            dst:'9910490789',
+            text:'Btech 4 sem results out!!!'
+
+        },function (data) {
+     console.log("message sent")
+
+
+        })
+}
 function requesting(){
     $.post('/notice/info',
         {
             //notice:$("#noticeName").val().replace(/ /g,''),
             course:$('#course :selected').text(),
             branch:$('#branch :selected').text(),
-            sem:$('#sem  :selected').text()
+            sem:$('#sem  :selected').text(),
+            year:$('#year :selected').text()
 
         },function (data) {
 
@@ -31,6 +46,7 @@ function requesting(){
             {
                 $("#notify").text("Notice is out!");
                 clearInterval(loopId);
+
             }
 
 
@@ -45,7 +61,7 @@ $(function () {
         requesting();
 
 
-        loopId= setInterval(requesting, 10000);
+        loopId= setInterval(requesting, 5000);
     })
 
 

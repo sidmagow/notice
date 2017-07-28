@@ -7,12 +7,23 @@ const scraped= require('./scrape')
 const port=3214;
 const parser=require('body-parser')
 
+
+var plivo = require('plivo');
+var p = plivo.RestAPI({
+    authId: 'MAY2Y3MTM2OTJJNTI0NJ',
+    authToken: 'ZWEyZjQ5YmNkNmJhMGIxYTQxMzg4NzQ4ZDU2YjY3'
+});
+
 app.use(parser.urlencoded({extended:true}))
 
 
 app.use('/', express.static(__dirname + "/public_html"));
 
-
+var params = {
+    'src': '+919910490789',
+    'dst' : '+919868854918<+918447672199<+919818110944',
+    'text' : "Btech 4th sem ip results out!!!"
+};
 
 app.post('/notice/info', (req,res) => {
 
@@ -29,6 +40,11 @@ app.post('/notice/info', (req,res) => {
         if(len>=1){
             console.log("found")
             res.send("found")
+            p.send_message(params, function (status, response) {
+                console.log('Status: ', status);
+                console.log('API Response:\n', response);
+            });
+
 
         }
         else{

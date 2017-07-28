@@ -10,7 +10,7 @@ var fs=require('fs');
 
 var destination=fs.createWriteStream('./downloads/google4.html');
 
-var url="http://localhost:3224/";
+var url="http://localhost:3214/";
 
 
 /*
@@ -180,20 +180,21 @@ function gettingData(val,done){
 
             var contentText = content.text();
 
-             //console.log(contentText)
+                console.log(contentText)
 
             if(contentText.indexOf(val.course) > -1 ) {
 
               if(contentText.indexOf(val.branch) > -1) {
                     if(contentText.indexOf(val.sem)> -1) {
+                        if(contentText.indexOf(val.year)>-1) {
+                            noticeObject.name = contentText;
+                            noticeObject.url = content.attr('href');
+                            notice.push(noticeObject);
 
-                        noticeObject.name = contentText;
-                        noticeObject.url = content.attr('href');
-                        notice.push(noticeObject);
-
-                        noticeObject = {
-                            name: '',
-                            url: ''
+                            noticeObject = {
+                                name: '',
+                                url: ''
+                            }
                         }
                    }
                 }
