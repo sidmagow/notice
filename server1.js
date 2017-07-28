@@ -22,7 +22,7 @@ app.use('/', express.static(__dirname + "/public_html"));
 
 var params = {
     'src': '+919910490789',
-    'dst' : '+919868854918<+918447672199<+919818110944',
+    'dst' : '+919868854918',
     'text' : "Btech 4th sem ip results out!!!"
 };
 
