@@ -27,11 +27,11 @@ app.post('/notice/info', (req,res) => {
     scraped.gettingData(req.body,function (len) {
 
         console.log("lengthhhhhhhhhhhh "+len);
-       console.log(" callback func done is called    is called")
+
         //res.send("success")
 
        //console.log("pos is:"+pos)
-        console.log(len)
+
 
         if(len>=1){
             console.log("found")

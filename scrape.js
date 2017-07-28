@@ -190,7 +190,7 @@ function gettingData(val,done){
 
             var contentText = content.text();
 
-                console.log(contentText)
+
 
             if(contentText.indexOf(val.course) > -1 ) {
 
