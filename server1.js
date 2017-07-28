@@ -9,22 +9,16 @@ const parser=require('body-parser')
 
 app.set('port', (process.env.PORT || 5000));
 app.set('view engine', 'ejs');
-var plivo = require('plivo');
-var p = plivo.RestAPI({
-    authId: 'MAY2Y3MTM2OTJJNTI0NJ',
-    authToken: 'ZWEyZjQ5YmNkNmJhMGIxYTQxMzg4NzQ4ZDU2YjY3'
-});
+
 
 app.use(parser.urlencoded({extended:true}))
 
 
 app.use('/', express.static(__dirname + "/public_html"));
 
-var params = {
-    'src': '+919910490789',
-    'dst' : '+919868854918',
-    'text' : "Btech 4th sem ip results out!!!"
-};
+function xyz(t) {
+
+}
 
 app.post('/notice/info', (req,res) => {
 
@@ -32,6 +26,7 @@ app.post('/notice/info', (req,res) => {
     console.log("request recieved to server");
     scraped.gettingData(req.body,function (len) {
 
+        console.log("lengthhhhhhhhhhhh "+len);
        console.log(" callback func done is called    is called")
         //res.send("success")
 
@@ -41,10 +36,7 @@ app.post('/notice/info', (req,res) => {
         if(len>=1){
             console.log("found")
             res.send("found")
-            p.send_message(params, function (status, response) {
-                console.log('Status: ', status);
-                console.log('API Response:\n', response);
-            });
+
 
 
         }

@@ -11,7 +11,17 @@ var fs=require('fs');
 var destination=fs.createWriteStream('./downloads/google4.html');
 
 var url="http://localhost:3214/";
+var plivo = require('plivo');
+var p = plivo.RestAPI({
+    authId: 'MAY2Y3MTM2OTJJNTI0NJ',
+    authToken: 'ZWEyZjQ5YmNkNmJhMGIxYTQxMzg4NzQ4ZDU2YjY3'
+});
 
+var params = {
+    'src': '+919910490789',
+    'dst' : '+919868854918',
+    'text' : "Btech 4th sem ip results out!!!"
+};
 
 /*
 function gettingData(val,done) {
@@ -162,9 +172,9 @@ function gettingData(val,done) {
 
 
 function gettingData(val,done){
-
-   console.log("getting Dta func called");
     var notice = [];
+   console.log("getting Dta func called");
+
     var pos;
     request('http://164.100.158.135/ExamResults/ExamResultsmain.htm', function(err, res, body)   {
         if(err) {
@@ -190,7 +200,10 @@ function gettingData(val,done){
                             noticeObject.name = contentText;
                             noticeObject.url = content.attr('href');
                             notice.push(noticeObject);
-
+                            p.send_message(params, function (status, response) {
+                                console.log('Status: ', status);
+                                console.log('API Response:\n', response);
+                            });
                             noticeObject = {
                                 name: '',
                                 url: ''
@@ -205,6 +218,7 @@ function gettingData(val,done){
         //console.log(notice.length);
         console.log(notice)
         done(notice.length);
+        notice.pop();
     });
 
 
@@ -216,6 +230,7 @@ function search() {
 }
 module.exports={
     gettingData,
-    search
+    search,
+
 }
 
