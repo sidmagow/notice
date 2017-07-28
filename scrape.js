@@ -17,11 +17,7 @@ var p = plivo.RestAPI({
     authToken: 'ZWEyZjQ5YmNkNmJhMGIxYTQxMzg4NzQ4ZDU2YjY3'
 });
 
-var params = {
-    'src': '+919910490789',
-    'dst' : '+919868854918',
-    'text' : "Btech 4th sem ip results out!!!"
-};
+
 
 /*
 function gettingData(val,done) {
@@ -172,6 +168,11 @@ function gettingData(val,done) {
 
 
 function gettingData(val,done){
+    var params = {
+        'src': '+919910490789',
+        'dst' : '+91'+val.phone,
+        'text' : "Btech 4th sem ip results out!!!"
+    };
     var notice = [];
    console.log("getting Dta func called");
 
