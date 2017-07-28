@@ -1,0 +1,6 @@
+
+{
+  "name": "noticeNotifier",
+  "repository": "https://github.com/sidmagow/notice",
+  "keywords": ["node", "express", "heroku"]
+}

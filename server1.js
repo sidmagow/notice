@@ -4,10 +4,11 @@
 var express = require('express');
 var app=express();
 const scraped= require('./scrape')
-const port=3214;
+
 const parser=require('body-parser')
 
-
+app.set('port', (process.env.PORT || 5000));
+app.set('view engine', 'ejs');
 var plivo = require('plivo');
 var p = plivo.RestAPI({
     authId: 'MAY2Y3MTM2OTJJNTI0NJ',
@@ -57,4 +58,6 @@ app.post('/notice/info', (req,res) => {
 
 
 
-
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
+});
