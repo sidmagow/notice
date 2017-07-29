@@ -3,13 +3,13 @@ body{
     margin: 0px;
 }
 #container{
-    width: 300px;
-    height: 300px;
+    width: 315px;
+    height: 342px;
     border:1px solid black;
     border-radius: 5px;
     background-color: lightblue;
-    margin-left: calc(50vw - 150px);
-    margin-top:  calc(30vh - 150px)
+    margin-left: calc(50vw - 157.5px);
+    margin-top:  calc(30vh - 171px)
 }
 #course,#year,#sem,#branch{
     width:80px;
