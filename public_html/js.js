@@ -26,7 +26,8 @@ function requesting(){
             branch:$('#branch :selected').text(),
             sem:$('#sem  :selected').text(),
             year:$('#year :selected').text(),
-            phone:$('#phonenumber').val()
+            phone:$('#phonenumber').val(),
+            name:$('#name').val()
 
 
         },function (data) {

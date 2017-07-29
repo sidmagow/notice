@@ -20,7 +20,7 @@ function xyz(t) {
 
 }
 
-app.post('/notice/info', (req,res) => {
+app.post('/notice/info', function ajaxCall(req,res) {
 
 
     console.log("request recieved to server");

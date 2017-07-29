@@ -1,0 +1,53 @@
+body{
+    padding:0px;
+    margin: 0px;
+}
+#container{
+    width: 300px;
+    height: 300px;
+    border:1px solid black;
+    border-radius: 5px;
+    background-color: lightblue;
+    margin-left: calc(50vw - 150px);
+    margin-top:  calc(30vh - 150px)
+}
+#course,#year,#sem,#branch{
+    width:80px;
+    margin-left:10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#phonenumber,#name{
+    margin-left:10px;
+    display: block;
+    margin-bottom: 10px;
+
+}
+#note{
+    display: block;
+    margin-left:10px;
+
+}
+#Submit{
+
+display: block;
+    margin-left: 115px;
+
+
+}
+#note{
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+#notify{
+    margin-top: 30px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+#heading{
+    font-size: 30px;
+    margin-left: 70px;
+}

@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Notice Notifier</title>
     <script src="jquery.js"></script>
     <script src="js.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h3>Notice Notifier</h3>
-<label for="course">Enter the notice details</label>
+<div id="container">
+<span id="heading">Notice Notifier</span>
+
+<span id="note">Enter the notice details:</span>
 
 <select id="course">
 <option value="B.Tech.">B.Tech.</option>
@@ -16,6 +19,7 @@
 <option value="PGDPR">PGDPR</option>
 <option value="M.Sc.">M.Sc.</option>
 </select>
+
 <select id="branch">
     <option value="CSE">CSE</option>
     <option value="ECE">ECE</option>
@@ -32,6 +36,7 @@
     <option value="MET">MET</option>
 
 </select>
+
 <select id="sem">
     <option value="1st">1st</option>
     <option value="2nd">2nd</option>
@@ -43,6 +48,7 @@
     <option value="8th">8th</option>
 
 </select>
+
 <select id="year">
     <option value="2017">2017</option>
     <option value="2016">2016</option>
@@ -50,9 +56,12 @@
     <option value="2014">2014</option>
     <option value="2013">2013</option>
 </select>
-<input id="phonenumber" type="text" placeholder="Enter mobile number">
+    <input id="name" type="text" placeholder="Name">
+<input id="phonenumber" type="text" placeholder="Mobile number">
+
 <button id="Submit">Submit</button>
 
-<h1 id="notify"></h1>
+<span id="notify"></span>
+    </div>
 </body>
 </html>

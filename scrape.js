@@ -175,7 +175,7 @@ function gettingData(val,done){
     };
     var notice = [];
    console.log("getting Dta func called");
-
+   console.log("request recieved frommmmmm"+val.name+"from numberrr"+ val.phone);
     var pos;
     request('http://164.100.158.135/ExamResults/ExamResultsmain.htm', function(err, res, body)   {
         if(err) {
