@@ -194,10 +194,10 @@ function gettingData(val,done){
 
 
             if(contentText.indexOf(val.course) > -1 ) {
-
-              if(contentText.indexOf(val.branch) > -1) {
-                    if(contentText.indexOf(val.sem)> -1) {
-                        if(contentText.indexOf(val.year)>-1) {
+                if(contentText.indexOf(val.month) > -1 ){
+                if (contentText.indexOf(val.branch) > -1) {
+                    if (contentText.indexOf(val.sem) > -1) {
+                        if (contentText.indexOf(val.year) > -1) {
                             noticeObject.name = contentText;
                             noticeObject.url = content.attr('href');
                             notice.push(noticeObject);
@@ -210,8 +210,9 @@ function gettingData(val,done){
                                 url: ''
                             }
                         }
-                   }
+                    }
                 }
+            }
             };
 
         });

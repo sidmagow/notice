@@ -26,6 +26,7 @@ function requesting(){
             branch:$('#branch :selected').text(),
             sem:$('#sem  :selected').text(),
             year:$('#year :selected').text(),
+            month:$('#month :selected').text(),
             phone:$('#phonenumber').val(),
             name:$('#name').val()
 
