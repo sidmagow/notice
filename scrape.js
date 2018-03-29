@@ -171,13 +171,13 @@ function gettingData(val,done){
     var params = {
         'src': '+919910490789',
         'dst' : '+91'+val.phone,
-        'text' : "Btech 4th sem ip results out!!!"
+        'text' : "Btech 6th sem ip results out!!!"
     };
     var notice = [];
    console.log("getting Dta func called");
    console.log("request recieved frommmmmm"+val.name+"from numberrr"+ val.phone);
     var pos;
-    request('http://164.100.158.135/ExamResults/ExamResultsmain.htm', function(err, res, body)   {
+    request('http://ggsipu.ac.in/ExamResults/ExamResultsmain.htm', function(err, res, body)   {
         if(err) {
             throw err;
         }
