@@ -10,7 +10,7 @@ function sendMessage() {
         {
           src:'9868854918',
             dst:'9910490789',
-            text:'Btech 4 sem results out!!!'
+            text:'Btech 6 sem results out!!!'
 
         },function (data) {
      console.log("message sent")
